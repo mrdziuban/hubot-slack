@@ -95,6 +95,10 @@ module.exports = (robot) ->
     memeGenerator msg, 'http://memecaptain.com/philosoraptor.jpg', msg.match[1], msg.match[2] + (if msg.match[2].search(/\?$/)==(-1) then '?' else ''), (url) ->
       msg.send url
 
+  robot.hear /(y\'?a\'?ll got any\s?more of (them|that)) (.*)/i, (msg) ->
+    memeGenerator msg, 'http://hotmeme.net/media/mememaker/e/8/5084-dave-chappelle-yall-got-any-more.jpg', msg.match[1], msg.match[3], (url) ->
+      msg.send url
+
 
 memeGenerator = (msg, imageName, text1, text2, callback) ->
   imageUrl = imageName
