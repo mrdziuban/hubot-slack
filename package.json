@@ -20,7 +20,8 @@
     "optparse": "1.0.3",
     "yelp": "0.1.1",
     "jsdom": ">0.2.1",
-    "hubot-slack": "~2.2.0"
+    "hubot-slack": "~2.2.0",
+    "xhr2": "*"
   },
   "engines": {
     "node": "0.6.x",
