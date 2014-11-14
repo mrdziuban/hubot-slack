@@ -75,4 +75,7 @@ module.exports = (robot) ->
     res.end helpContents robot.name, emit
 
   robot.respond /gist help/i, (msg) ->
-    msg.send "Type one of the following commands to update the Gist with a new language hack:\n```\n#languagehacks <hack text> -- this will update the 'General' file\n#csshacks <hack text> -- this will update the 'CSS' file\n#jshacks / #javascripthacks <hack text> -- this will update the 'JavaScript' file\n#phphacks <hack text> -- this will update the 'PHP' file\n```\nUse the following syntax to format your text in the Gist:\n```\nFormat code by putting backticks (`) around text\nMake text italics by putting asterisks (*) around it\nMake text bold by putting two asterisks (**) around it\n```"
+    msg.send "Type one of the following commands to update the Gist with a new language hack:\n```\n#languagehacks <hack text> -- this will update the 'General' file\n#csshacks <hack text> -- this will update the 'CSS' file\n#jshacks / #javascripthacks <hack text> -- this will update the 'JavaScript' file\n#phphacks <hack text> -- this will update the 'PHP' file\n```"
+    setTimeout ( ->
+      msg.send "Use the following syntax to format your text in the Gist:\n```\nFormat code by putting backticks (`) around text\nMake text italics by putting asterisks (*) around it\nMake text bold by putting two asterisks (**) around it\n```"
+    ), 500
