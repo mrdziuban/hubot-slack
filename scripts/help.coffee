@@ -77,8 +77,8 @@ module.exports = (robot) ->
   robot.respond /gist help/i, (msg) ->
     msg.send "Gist located at https://gist.github.com/mrdziuban/94426dd1cd697dfd66d2"
     setTimeout ( ->
-      msg.send "Type one of the following commands to update the Gist with a new language hack:\n```\n#languagehacks <hack text> -- this will update the 'General' file\n#csshacks <hack text> -- this will update the 'CSS' file\n#jshacks / #javascripthacks <hack text> -- this will update the 'JavaScript' file\n#phphacks <hack text> -- this will update the 'PHP' file\n```"
+      msg.send "Type one of the following commands to update the Gist with a new language hack:\n>>>#languagehacks <hack text> -- this will update the 'General' file\n#csshacks <hack text> -- this will update the 'CSS' file\n#jshacks / #javascripthacks <hack text> -- this will update the 'JavaScript' file\n#phphacks <hack text> -- this will update the 'PHP' file"
     ), 250
     setTimeout ( ->
-      msg.send "Use the following syntax to format your text in the Gist:\n```\nFormat code by putting backticks (`) around text\nMake text italics by putting asterisks (*) around it\nMake text bold by putting two asterisks (**) around it\n```"
+      msg.send "Use the following syntax to format your text in the Gist:\n>>>Format code by putting backticks (`) around text\nMake text italics by putting asterisks (*) around it\nMake text bold by putting two asterisks (**) around it"
     ), 500
