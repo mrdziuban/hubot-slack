@@ -43,9 +43,9 @@ module.exports = (robot) ->
     memeGenerator msg, 'http://i.imgur.com/cOnPlV7.jpg', 'Brace Yourself', msg.match[1], (url) ->
       msg.send url
 
-  robot.hear /(.*) (ALL the .*)/i, (msg) ->
-    memeGenerator msg, 'http://memecaptain.com/all_the_things.jpg', msg.match[1], msg.match[2], (url) ->
-      msg.send url
+  # robot.hear /(.*) (ALL the .*)/i, (msg) ->
+  #   memeGenerator msg, 'http://memecaptain.com/all_the_things.jpg', msg.match[1], msg.match[2], (url) ->
+  #     msg.send url
 
   robot.hear /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i, (msg) ->
     memeGenerator msg, 'http://memecaptain.com/most_interesting.jpg', msg.match[1], msg.match[2], (url) ->
