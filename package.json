@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "hubot": "2.6.3",
-    "hubot-scripts": ">= 2.6.3",
+    "hubot-scripts": ">= 2.5.0 < 3.0.0",
     "optparse": "1.0.3",
     "yelp": "0.1.1",
     "jsdom": ">0.2.1",
