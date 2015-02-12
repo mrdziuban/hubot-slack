@@ -37,6 +37,9 @@ module.exports = (robot) ->
       i++
       break if i == count
 
+  robot.respond /^say (.*)/i, (msg) ->
+    msg.send msg.match[1]
+
 imageMe = (msg, query, animated, cb) ->
   if /brendan|destefano/i.test(query)
     return imageMe(msg, 'macaulay culkin', animated, cb)
