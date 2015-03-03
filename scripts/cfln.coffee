@@ -1,3 +1,18 @@
+# Description:
+#   Pull a random commit from Commit Logs From Last Night
+#
+# Dependencies:
+#   jsdom
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot commit me
+#
+# Author:
+#   Matt Dziuban
+
 jsdom = require 'jsdom'
 
 module.exports = (robot) ->
