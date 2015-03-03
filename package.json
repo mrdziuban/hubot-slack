@@ -17,11 +17,12 @@
   "dependencies": {
     "hubot": "2.6.3",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
-    "optparse": "1.0.3",
-    "yelp": "0.1.1",
-    "jsdom": ">0.2.1",
     "hubot-slack": "~2.2.0",
-    "xhr2": "*"
+    "jsdom": ">0.2.1",
+    "optparse": "1.0.3",
+    "sugar": "^1.4.1",
+    "xhr2": "*",
+    "yelp": "0.1.1"
   },
   "engines": {
     "node": "0.10.x",
