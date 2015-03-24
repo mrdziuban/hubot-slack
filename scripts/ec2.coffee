@@ -40,5 +40,5 @@ module.exports = (robot) ->
   robot.respond /what(\'s| is) the ip of ([^\?]+)\??$/i, (msg) ->
     queryEc2 msg, msg.match[2]
 
-  robot.respond /what(\'s| is) ([a-zA-Z]+)(\'s)? ip/i, (msg) ->
+  robot.respond /what(\'s| is) ([a-zA-Z]+)(\'s)? ip$/i, (msg) ->
     queryEc2 msg, msg.match[2]
