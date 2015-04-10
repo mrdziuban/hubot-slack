@@ -14,7 +14,7 @@
 #   jmhobbs
 
 module.exports = (robot) ->
-  robot.respond /is (the site|bostinno|itc|inthecapital) (up|down)(\?)?/i, (msg) ->
+  robot.respond /is (the site|bostinno|dc|dc\s?inno|chicago|chicago\s?inno|la|la\s?inno|austin|austin\s?inno|seattle|seattle\s?inno) (up|down)(\?)?/i, (msg) ->
     isUp msg, msg.match[1], (domain) ->
       msg.send domain
 
@@ -22,7 +22,10 @@ isUp = (msg, domain, cb) ->
   if domain.toLowerCase() == 'bostinno' or domain.toLowerCase() == 'the site'
     domain = 'bostinno.streetwise.co'
   else
-    domain = 'inthecapital.streetwise.co'
+    domain = domain.toLowerCase().replace(/\s+/, '')
+    if domain.substring(2) != 'inno'
+      domain = domain+'inno'
+    domain = domain+'.streetwise.co'
   msg.http("http://isitup.org/#{domain}.json")
     .header('User-Agent', 'Hubot')
     .get() (err, res, body) ->
