@@ -1,4 +1,4 @@
-# Description: 
+# Description:
 #   Generates help commands for Hubot.
 #
 # Commands:
@@ -75,7 +75,7 @@ module.exports = (robot) ->
     res.end helpContents robot.name, emit
 
   robot.respond /gist help/i, (msg) ->
-    msg.send "Gist located at https://gist.github.com/mrdziuban/94426dd1cd697dfd66d2"
+    msg.send "Gist located at https://gist.github.com/streetwise-stager/eaad5445f7e23cedae98"
     setTimeout ( ->
       msg.send "Type one of the following commands to update the Gist with a new language hack:\n>>>#languagehacks <hack text> -- this will update the 'General' file\n#csshacks <hack text> -- this will update the 'CSS' file\n#jshacks / #javascripthacks <hack text> -- this will update the 'JavaScript' file\n#phphacks <hack text> -- this will update the 'PHP' file"
     ), 250
